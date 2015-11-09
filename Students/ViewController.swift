@@ -9,17 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let studentSummaryViewDataSource = StudentSummaryViewDataSourceController()
+    
+    @IBOutlet weak var studentSummaryView : StudentSummaryView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        studentSummaryView.dataSource = studentSummaryViewDataSource
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func didTapAddStudentButton() {
+        
+        Student.insertStudentWithName("John Doe", inManagedObjectContext: ModelManager.sharedManager.managedObjectContext)
+        ModelManager.sharedManager.saveContext()
+        studentSummaryView.reloadData()
+        
     }
-
-
+    
 }
 

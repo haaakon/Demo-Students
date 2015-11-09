@@ -7,13 +7,44 @@
 //
 
 import XCTest
+import CoreData
+
 @testable import Students
 
 class StudentsTests: XCTestCase {
     
+    class func jsonDictionaryFromFile(filename: String) -> Dictionary<String, AnyObject> {
+        let testBundle = NSBundle(forClass: AppDelegate.self)
+        let path = testBundle.pathForResource(filename, ofType: "json")
+        XCTAssertNotNil(path, "wrong filename")
+        let data = NSData(contentsOfFile: path!)
+        XCTAssertNotNil(data, "wrong filename")
+        do {
+            if let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as? Dictionary<String,AnyObject> {
+                return jsonDictionary
+            }
+            
+        } catch let error {
+            print(error)
+        }
+        return [String :AnyObject]()
+    }
+    
+    
+    var managedObjectContext : NSManagedObjectContext {
+        return ModelManager.sharedManager.managedObjectContext
+    }
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let students = Student.allObjects(inManagedObjectContext: managedObjectContext)
+        
+        for student in students {
+            managedObjectContext.deleteObject(student)
+        }
+        
+        ModelManager.sharedManager.saveContext()
     }
     
     override func tearDown() {
@@ -21,15 +52,56 @@ class StudentsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCreate2Students() {
+        let _ = Student.insertStudentWithName("Erik", inManagedObjectContext: managedObjectContext)
+        
+        let _ = Student.insertStudentWithName("Magnus", inManagedObjectContext: managedObjectContext)
+        
+        ModelManager.sharedManager.saveContext()
+        
+        let fetchedStudents = Student.allObjects(inManagedObjectContext: managedObjectContext)
+        XCTAssertEqual(fetchedStudents.count, 2)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testCreateStudentFromJSON () {
+        let wantedName = "Marie Curie"
+        let wantedGrade = 5
+        let jsonAttributes = StudentsTests.jsonDictionaryFromFile("1Student")
+        
+        let student = Student(attributes: jsonAttributes)
+        ModelManager.sharedManager.saveContext()
+        
+        XCTAssertNotNil(student)
+        
+        XCTAssertEqual(student?.name, wantedName)
+        XCTAssertEqual(student?.grade, wantedGrade)
+        
+        let fetchedStudent = Student.allObjects(inManagedObjectContext: managedObjectContext).first!
+        
+        XCTAssertEqual(fetchedStudent.name, wantedName)
+        XCTAssertEqual(fetchedStudent.grade, wantedGrade)
+        
+    }
+    
+    func testShouldNotCreateStudent() {
+        let jsonAttributes = StudentsTests.jsonDictionaryFromFile("1FalseStudent")
+        
+        let student = Student(attributes: jsonAttributes)
+        ModelManager.sharedManager.saveContext()
+        
+        XCTAssertNil(student)
+        
+    }
+    
+    
+    func testMeasureCreate1000Students() {
+        let jsonAttributes = StudentsTests.jsonDictionaryFromFile("1Student")
+        measureBlock { () -> Void in
+            for _ in 0...1000 {
+                let student = Student(attributes: jsonAttributes)
+                XCTAssertNotNil(student)
+            }
+            ModelManager.sharedManager.saveContext()
         }
     }
     

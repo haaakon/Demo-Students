@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Students" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rj-Hl-7K2" customClass="StudentSummaryView" customModule="Students" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="560" height="156"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Studenter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8K-6O-T85">
+                                        <rect key="frame" x="17" y="8" width="535" height="70"/>
+                                        <color key="backgroundColor" red="0.55461040296052633" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="FIY-qj-w32"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="23"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="G8K-6O-T85" firstAttribute="leading" secondItem="6rj-Hl-7K2" secondAttribute="leading" constant="17" id="bW7-2K-efA"/>
+                                    <constraint firstItem="G8K-6O-T85" firstAttribute="top" secondItem="6rj-Hl-7K2" secondAttribute="top" constant="8" id="y1I-bJ-Uh9"/>
+                                    <constraint firstAttribute="trailing" secondItem="G8K-6O-T85" secondAttribute="trailing" constant="8" id="y8T-5H-6SH"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="numberOfStudentsLabel" destination="G8K-6O-T85" id="50Z-IC-Y4I"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-fZ-l6O">
+                                <rect key="frame" x="216" y="186" width="168" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0069901315789473685" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="cS0-Ze-AI2"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Legg til"/>
+                                <connections>
+                                    <action selector="didTapAddStudentButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dwc-Al-ZDk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O4c-fZ-l6O" firstAttribute="top" secondItem="6rj-Hl-7K2" secondAttribute="bottom" constant="30" id="4ja-fZ-aiU"/>
+                            <constraint firstItem="6rj-Hl-7K2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Co8-Z5-Muc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6rj-Hl-7K2" secondAttribute="bottom" constant="444" id="Dax-JD-NDE"/>
+                            <constraint firstItem="6rj-Hl-7K2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="PKg-cq-WgJ"/>
+                            <constraint firstAttribute="trailing" secondItem="6rj-Hl-7K2" secondAttribute="trailing" constant="20" id="nkd-7r-idC"/>
+                            <constraint firstItem="O4c-fZ-l6O" firstAttribute="centerX" secondItem="6rj-Hl-7K2" secondAttribute="centerX" id="usa-pe-qfs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="studentSummaryView" destination="6rj-Hl-7K2" id="PHj-vF-G3q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="272" y="207"/>
         </scene>
     </scenes>
 </document>
