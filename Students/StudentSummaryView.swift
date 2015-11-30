@@ -11,12 +11,18 @@ import UIKit
 @objc
 
 protocol StudentSummaryViewDataSource {
+
     func numberOfStudentsInStudentSummaryView(studentSummaryView: StudentSummaryView) -> Int
+
+    func averageGradeOfStudentsInStudentSummaryView(studentSummaryView: StudentSummaryView) -> Float
+
 }
 
 class StudentSummaryView: UIView {
     
     @IBOutlet weak var numberOfStudentsLabel : UILabel!
+
+    @IBOutlet weak var averageGradeLabel : UILabel!
     
     weak var dataSource : StudentSummaryViewDataSource? {
         didSet {
@@ -30,6 +36,12 @@ class StudentSummaryView: UIView {
             numberOfStudentsLabel.text = "\(numberOfStudents) studenter"
         } else {
             numberOfStudentsLabel.text = "?"
+        }
+
+        if let averageGrade = dataSource?.averageGradeOfStudentsInStudentSummaryView(self) {
+            averageGradeLabel.text = "gjennomsnittskarakter: \(averageGrade)"
+        } else {
+            averageGradeLabel.text = "?"
         }
         
     }

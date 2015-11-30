@@ -19,6 +19,17 @@ final class Student: NSManagedObject, Fetchable {
         student.name = name
         return student
     }
+
+    static func averageGrade(inManagedObjectContext managedObjectContext: NSManagedObjectContext = ModelManager.sharedManager.managedObjectContext) -> Float {
+        let students = Student.allObjects(inManagedObjectContext: managedObjectContext)
+
+        var totalGrade : Float = 0
+        for student in students {
+            totalGrade += student.grade!.floatValue
+        }
+        return totalGrade / Float(students.count)
+
+    }
     
     convenience init?(attributes: [String: AnyObject], inManagedObjectContext managedObjectContext: NSManagedObjectContext = ModelManager.sharedManager.managedObjectContext) {
         

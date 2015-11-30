@@ -29,8 +29,7 @@ class StudentsTests: XCTestCase {
         }
         return [String :AnyObject]()
     }
-    
-    
+
     var managedObjectContext : NSManagedObjectContext {
         return ModelManager.sharedManager.managedObjectContext
     }
@@ -60,9 +59,19 @@ class StudentsTests: XCTestCase {
         ModelManager.sharedManager.saveContext()
         
         let fetchedStudents = Student.allObjects(inManagedObjectContext: managedObjectContext)
-        XCTAssertEqual(fetchedStudents.count, 2)
+        XCTAssertEqual(fetchedStudents.count, 2, "students should be 2")
+        XCTAssert(fetchedStudents.count == 2)
+        XCTAssertTrue(fetchedStudents.count == 2)
     }
-    
+
+    func testCreate1Student() {
+        let student = Student.insertStudentWithName("Erik", inManagedObjectContext: managedObjectContext)
+        ModelManager.sharedManager.saveContext()
+        let fetchedStudents = Student.allObjects(inManagedObjectContext: managedObjectContext)
+        XCTAssertEqual(fetchedStudents.count, 1)
+    }
+
+
     func testCreateStudentFromJSON () {
         let wantedName = "Marie Curie"
         let wantedGrade = 5
@@ -90,10 +99,31 @@ class StudentsTests: XCTestCase {
         ModelManager.sharedManager.saveContext()
         
         XCTAssertNil(student)
-        
     }
-    
-    
+
+
+    func testAverageGradeForSingleStudent() {
+        let student = Student.insertStudentWithName("Per", inManagedObjectContext: managedObjectContext)
+        student.grade = 3
+
+        ModelManager.sharedManager.saveContext()
+
+        let averageGrade = Student.averageGrade()
+        XCTAssertEqual(averageGrade, 3)
+    }
+
+    func testAverageGradeFor2Students() {
+     let student = Student.insertStudentWithName("Per", inManagedObjectContext: managedObjectContext)
+     let student2 = Student.insertStudentWithName("Monica", inManagedObjectContext: managedObjectContext)
+        student.grade = 1
+        student2.grade = 6
+
+        ModelManager.sharedManager.saveContext()
+
+        let averageGrade = Student.averageGrade()
+        XCTAssertEqual(averageGrade, 3.5)
+    }
+
     func testMeasureCreate1000Students() {
         let jsonAttributes = StudentsTests.jsonDictionaryFromFile("1Student")
         measureBlock { () -> Void in

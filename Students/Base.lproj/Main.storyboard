@@ -27,17 +27,26 @@
                                             <constraint firstAttribute="height" constant="70" id="FIY-qj-w32"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="23"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 gjennomsnitt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gha-ae-PnM">
+                                        <rect key="frame" x="216" y="107" width="128" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="gha-ae-PnM" firstAttribute="top" secondItem="G8K-6O-T85" secondAttribute="bottom" constant="29" id="Gd6-DL-hnU"/>
                                     <constraint firstItem="G8K-6O-T85" firstAttribute="leading" secondItem="6rj-Hl-7K2" secondAttribute="leading" constant="17" id="bW7-2K-efA"/>
+                                    <constraint firstItem="gha-ae-PnM" firstAttribute="centerX" secondItem="6rj-Hl-7K2" secondAttribute="centerX" id="v9t-QR-XRm"/>
                                     <constraint firstItem="G8K-6O-T85" firstAttribute="top" secondItem="6rj-Hl-7K2" secondAttribute="top" constant="8" id="y1I-bJ-Uh9"/>
                                     <constraint firstAttribute="trailing" secondItem="G8K-6O-T85" secondAttribute="trailing" constant="8" id="y8T-5H-6SH"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="averageGradeLabel" destination="gha-ae-PnM" id="c7k-bu-gMF"/>
                                     <outlet property="numberOfStudentsLabel" destination="G8K-6O-T85" id="50Z-IC-Y4I"/>
                                 </connections>
                             </view>

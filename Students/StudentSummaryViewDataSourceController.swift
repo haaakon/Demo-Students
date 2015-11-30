@@ -17,5 +17,10 @@ class StudentSummaryViewDataSourceController : StudentSummaryViewDataSource {
         return allStudents.count
         
     }
+
+    @objc func averageGradeOfStudentsInStudentSummaryView(studentSummaryView: StudentSummaryView) -> Float {
+
+        return Student.averageGrade()
+    }
     
 }
