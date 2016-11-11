@@ -12,9 +12,9 @@ import CoreData
 extension Fetchable where Self : NSManagedObject {
     
     static func allObjects(inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> [Self] {
-        let fetchRequest = NSFetchRequest(entityName: entityName)
+        let fetchRequest = NSFetchRequest<Self>(entityName: entityName)
         do {
-            let results = try managedObjectContext.executeFetchRequest(fetchRequest)
+            let results = try managedObjectContext.fetch(fetchRequest)
             return results as! [Self]
         } catch {
             print("An error occurred")

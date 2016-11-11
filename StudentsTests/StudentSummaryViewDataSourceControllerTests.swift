@@ -20,7 +20,7 @@ class StudentSummaryViewDataSourceControllerTests: XCTestCase {
         let stud = Student.allObjects(inManagedObjectContext: managedObjectContext)
         
         for student in stud {
-            managedObjectContext.deleteObject(student)
+            managedObjectContext.delete(student)
         }
         
         ModelManager.sharedManager.saveContext()
@@ -31,7 +31,7 @@ class StudentSummaryViewDataSourceControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func mockInsertStudents(names : [String]) -> [Student] {
+    func mockInsertStudents(_ names : [String]) -> [Student] {
         let insertedStudents =  names.map { (name) -> Student in
             let student = Student.insertStudentWithName(name, inManagedObjectContext: managedObjectContext)
             
@@ -43,16 +43,5 @@ class StudentSummaryViewDataSourceControllerTests: XCTestCase {
         return insertedStudents
     }
     
-    func testSummaryOf2Students() {
-        
-        mockInsertStudents(["Per", "Kristina"])
-        
-        let studentSummaryViewDataSourceController = StudentSummaryViewDataSourceController()
-        
-        let numberOfStudentsShown = studentSummaryViewDataSourceController.numberOfStudentsInStudentSummaryView(StudentSummaryView())
-        
-        XCTAssertEqual(numberOfStudentsShown, 2)
-        
-    }
     
 }

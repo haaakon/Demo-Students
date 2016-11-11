@@ -10,7 +10,7 @@ import UIKit
 
 class StudentSummaryViewDataSourceController : StudentSummaryViewDataSource {
     
-    @objc func numberOfStudentsInStudentSummaryView(studentSummaryView: StudentSummaryView) -> Int {
+    @objc func numberOfStudentsInStudentSummaryView(_ studentSummaryView: StudentSummaryView) -> Int {
         
         let allStudents = Student.allObjects(inManagedObjectContext: ModelManager.sharedManager.managedObjectContext)
         
@@ -18,7 +18,7 @@ class StudentSummaryViewDataSourceController : StudentSummaryViewDataSource {
         
     }
 
-    @objc func averageGradeOfStudentsInStudentSummaryView(studentSummaryView: StudentSummaryView) -> Float {
+    @objc func averageGradeOfStudentsInStudentSummaryView(_ studentSummaryView: StudentSummaryView) -> Float {
 
         return Student.averageGrade()
     }

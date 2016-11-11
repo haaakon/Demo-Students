@@ -14,8 +14,8 @@ final class Student: NSManagedObject, Fetchable {
     
     static var entityName = "Student"
     
-    static func insertStudentWithName(name: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Student {
-        let student = Student(entity: NSEntityDescription.entityForName(entityName, inManagedObjectContext: managedObjectContext)!, insertIntoManagedObjectContext: managedObjectContext)
+    static func insertStudentWithName(_ name: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Student {
+        let student = Student(entity: NSEntityDescription.entity(forEntityName: entityName, in: managedObjectContext)!, insertInto: managedObjectContext)
         student.name = name
         return student
     }
@@ -42,7 +42,7 @@ final class Student: NSManagedObject, Fetchable {
             return nil
         }
         
-        self.init(entity: NSEntityDescription.entityForName(Student.entityName, inManagedObjectContext: managedObjectContext)!, insertIntoManagedObjectContext: managedObjectContext)
+        self.init(entity: NSEntityDescription.entity(forEntityName: Student.entityName, in: managedObjectContext)!, insertInto: managedObjectContext)
         self.name = actualName
         self.grade = actualGrade
         

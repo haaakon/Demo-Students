@@ -12,9 +12,9 @@ import UIKit
 
 protocol StudentSummaryViewDataSource {
 
-    func numberOfStudentsInStudentSummaryView(studentSummaryView: StudentSummaryView) -> Int
+    func numberOfStudentsInStudentSummaryView(_ studentSummaryView: StudentSummaryView) -> Int
 
-    func averageGradeOfStudentsInStudentSummaryView(studentSummaryView: StudentSummaryView) -> Float
+    func averageGradeOfStudentsInStudentSummaryView(_ studentSummaryView: StudentSummaryView) -> Float
 
 }
 

@@ -13,14 +13,14 @@ import CoreData
 
 class StudentsTests: XCTestCase {
     
-    class func jsonDictionaryFromFile(filename: String) -> Dictionary<String, AnyObject> {
-        let testBundle = NSBundle(forClass: AppDelegate.self)
-        let path = testBundle.pathForResource(filename, ofType: "json")
+    class func jsonDictionaryFromFile(_ filename: String) -> Dictionary<String, AnyObject> {
+        let testBundle = Bundle(for: AppDelegate.self)
+        let path = testBundle.path(forResource: filename, ofType: "json")
         XCTAssertNotNil(path, "wrong filename")
-        let data = NSData(contentsOfFile: path!)
+        let data = try? Data(contentsOf: URL(fileURLWithPath: path!))
         XCTAssertNotNil(data, "wrong filename")
         do {
-            if let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as? Dictionary<String,AnyObject> {
+            if let jsonDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as? Dictionary<String,AnyObject> {
                 return jsonDictionary
             }
             
@@ -40,7 +40,7 @@ class StudentsTests: XCTestCase {
         let students = Student.allObjects(inManagedObjectContext: managedObjectContext)
         
         for student in students {
-            managedObjectContext.deleteObject(student)
+            managedObjectContext.delete(student)
         }
         
         ModelManager.sharedManager.saveContext()
@@ -83,12 +83,12 @@ class StudentsTests: XCTestCase {
         XCTAssertNotNil(student)
         
         XCTAssertEqual(student?.name, wantedName)
-        XCTAssertEqual(student?.grade, wantedGrade)
+        XCTAssertEqual(student?.grade?.intValue, wantedGrade)
         
         let fetchedStudent = Student.allObjects(inManagedObjectContext: managedObjectContext).first!
         
         XCTAssertEqual(fetchedStudent.name, wantedName)
-        XCTAssertEqual(fetchedStudent.grade, wantedGrade)
+        XCTAssertEqual(fetchedStudent.grade?.intValue, wantedGrade)
         
     }
     
@@ -126,7 +126,7 @@ class StudentsTests: XCTestCase {
 
     func testMeasureCreate1000Students() {
         let jsonAttributes = StudentsTests.jsonDictionaryFromFile("1Student")
-        measureBlock { () -> Void in
+        measure { () -> Void in
             for _ in 0...1000 {
                 let student = Student(attributes: jsonAttributes)
                 XCTAssertNotNil(student)
