@@ -15,7 +15,7 @@ extension Fetchable where Self : NSManagedObject {
         let fetchRequest = NSFetchRequest<Self>(entityName: entityName)
         do {
             let results = try managedObjectContext.fetch(fetchRequest)
-            return results as! [Self]
+            return results
         } catch {
             print("An error occurred")
             return [Self]()

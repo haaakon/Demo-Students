@@ -11,10 +11,12 @@ import CoreData
 
 @testable import Students
 
+class BundleClass {}
+
 class StudentsTests: XCTestCase {
     
     class func jsonDictionaryFromFile(_ filename: String) -> Dictionary<String, AnyObject> {
-        let testBundle = Bundle(for: AppDelegate.self)
+        let testBundle = Bundle(for: BundleClass.self)
         let path = testBundle.path(forResource: filename, ofType: "json")
         XCTAssertNotNil(path, "wrong filename")
         let data = try? Data(contentsOf: URL(fileURLWithPath: path!))
@@ -31,7 +33,7 @@ class StudentsTests: XCTestCase {
     }
 
     var managedObjectContext : NSManagedObjectContext {
-        return ModelManager.sharedManager.managedObjectContext
+        return ModelManager.sharedManager.persistentContainer.viewContext
     }
     
     override func setUp() {
@@ -52,8 +54,8 @@ class StudentsTests: XCTestCase {
     }
     
     func testCreate2Students() {
-        let _ = Student.insertStudentWithName("Erik", inManagedObjectContext: managedObjectContext)
         
+        let _ = Student.insertStudentWithName("Erik", inManagedObjectContext: managedObjectContext)
         let _ = Student.insertStudentWithName("Magnus", inManagedObjectContext: managedObjectContext)
         
         ModelManager.sharedManager.saveContext()

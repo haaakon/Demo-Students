@@ -7,12 +7,13 @@
 //
 
 import UIKit
+@testable import Students
 
 class StudentSummaryViewDataSourceController : StudentSummaryViewDataSource {
     
     @objc func numberOfStudentsInStudentSummaryView(_ studentSummaryView: StudentSummaryView) -> Int {
         
-        let allStudents = Student.allObjects(inManagedObjectContext: ModelManager.sharedManager.managedObjectContext)
+        let allStudents = Student.allObjects(inManagedObjectContext: ModelManager.sharedManager.persistentContainer.viewContext)
         
         return allStudents.count
         

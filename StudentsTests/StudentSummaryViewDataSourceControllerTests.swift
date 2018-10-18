@@ -8,11 +8,12 @@
 
 import XCTest
 import CoreData
+@testable import Students
 
 class StudentSummaryViewDataSourceControllerTests: XCTestCase {
     
     var managedObjectContext : NSManagedObjectContext {
-        return ModelManager.sharedManager.managedObjectContext
+        return ModelManager.sharedManager.persistentContainer.viewContext
     }
     
     override func setUp() {

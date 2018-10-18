@@ -8,54 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EC32F7421BF0C18E0020D853 /* TheDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7401BF0C18E0020D853 /* TheDataModel.xcdatamodeld */; };
-		EC32F7431BF0C18E0020D853 /* TheDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7401BF0C18E0020D853 /* TheDataModel.xcdatamodeld */; };
-		EC32F7441BF0C18E0020D853 /* TheDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7401BF0C18E0020D853 /* TheDataModel.xcdatamodeld */; };
-		EC32F7451BF0C4CB0020D853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC67F1BF09DA2009B4323 /* AppDelegate.swift */; };
 		EC32F7471BF0C4F00020D853 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7461BF0C4F00020D853 /* ModelManager.swift */; };
-		EC32F7481BF0C4F00020D853 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7461BF0C4F00020D853 /* ModelManager.swift */; };
-		EC32F7491BF0C4F00020D853 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7461BF0C4F00020D853 /* ModelManager.swift */; };
 		EC32F7531BF121060020D853 /* StudentSummaryViewDataSourceControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7521BF121060020D853 /* StudentSummaryViewDataSourceControllerTests.swift */; };
-		EC32F7541BF121060020D853 /* StudentSummaryViewDataSourceControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32F7521BF121060020D853 /* StudentSummaryViewDataSourceControllerTests.swift */; };
 		EC32F7571BF1292D0020D853 /* 1Student.json in Resources */ = {isa = PBXBuildFile; fileRef = EC32F7561BF1292D0020D853 /* 1Student.json */; };
-		EC32F7581BF1292D0020D853 /* 1Student.json in Resources */ = {isa = PBXBuildFile; fileRef = EC32F7561BF1292D0020D853 /* 1Student.json */; };
 		EC32F75A1BF12CDA0020D853 /* 1FalseStudent.json in Resources */ = {isa = PBXBuildFile; fileRef = EC32F7591BF12CDA0020D853 /* 1FalseStudent.json */; };
-		EC32F75B1BF12CDA0020D853 /* 1FalseStudent.json in Resources */ = {isa = PBXBuildFile; fileRef = EC32F7591BF12CDA0020D853 /* 1FalseStudent.json */; };
 		EC9CC6801BF09DA2009B4323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC67F1BF09DA2009B4323 /* AppDelegate.swift */; };
 		EC9CC6821BF09DA2009B4323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6811BF09DA2009B4323 /* ViewController.swift */; };
 		EC9CC6851BF09DA2009B4323 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9CC6831BF09DA2009B4323 /* Main.storyboard */; };
 		EC9CC68A1BF09DA2009B4323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9CC6891BF09DA2009B4323 /* Assets.xcassets */; };
 		EC9CC68D1BF09DA2009B4323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9CC68B1BF09DA2009B4323 /* LaunchScreen.storyboard */; };
 		EC9CC6981BF09DA2009B4323 /* StudentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6971BF09DA2009B4323 /* StudentsTests.swift */; };
-		EC9CC6A31BF09DA2009B4323 /* StudentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6A21BF09DA2009B4323 /* StudentsUITests.swift */; };
 		EC9CC6B11BF09DCF009B4323 /* StudentSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B01BF09DCF009B4323 /* StudentSummaryView.swift */; };
-		EC9CC6B21BF09DCF009B4323 /* StudentSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B01BF09DCF009B4323 /* StudentSummaryView.swift */; };
-		EC9CC6B31BF09DCF009B4323 /* StudentSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B01BF09DCF009B4323 /* StudentSummaryView.swift */; };
 		EC9CC6B51BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B41BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift */; };
-		EC9CC6B61BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B41BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift */; };
-		EC9CC6B71BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B41BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift */; };
 		EC9CC6BA1BF0A57E009B4323 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B81BF0A57E009B4323 /* Student+CoreDataProperties.swift */; };
-		EC9CC6BB1BF0A57E009B4323 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B81BF0A57E009B4323 /* Student+CoreDataProperties.swift */; };
-		EC9CC6BC1BF0A57E009B4323 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B81BF0A57E009B4323 /* Student+CoreDataProperties.swift */; };
 		EC9CC6BD1BF0A57E009B4323 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B91BF0A57E009B4323 /* Student.swift */; };
-		EC9CC6BE1BF0A57E009B4323 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B91BF0A57E009B4323 /* Student.swift */; };
-		EC9CC6BF1BF0A57E009B4323 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6B91BF0A57E009B4323 /* Student.swift */; };
 		EC9CC6C11BF0A613009B4323 /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6C01BF0A613009B4323 /* Fetchable.swift */; };
-		EC9CC6C21BF0A613009B4323 /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6C01BF0A613009B4323 /* Fetchable.swift */; };
-		EC9CC6C31BF0A613009B4323 /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6C01BF0A613009B4323 /* Fetchable.swift */; };
 		EC9CC6C51BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6C41BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift */; };
-		EC9CC6C61BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6C41BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift */; };
-		EC9CC6C71BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9CC6C41BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		EC9CC6941BF09DA2009B4323 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC9CC6741BF09DA2009B4323 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC9CC67B1BF09DA2009B4323;
-			remoteInfo = Students;
-		};
-		EC9CC69F1BF09DA2009B4323 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC9CC6741BF09DA2009B4323 /* Project object */;
 			proxyType = 1;
@@ -80,9 +52,6 @@
 		EC9CC6931BF09DA2009B4323 /* StudentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9CC6971BF09DA2009B4323 /* StudentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTests.swift; sourceTree = "<group>"; };
 		EC9CC6991BF09DA2009B4323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC9CC69E1BF09DA2009B4323 /* StudentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC9CC6A21BF09DA2009B4323 /* StudentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsUITests.swift; sourceTree = "<group>"; };
-		EC9CC6A41BF09DA2009B4323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC9CC6B01BF09DCF009B4323 /* StudentSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentSummaryView.swift; sourceTree = "<group>"; };
 		EC9CC6B41BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentSummaryViewDataSourceController.swift; sourceTree = "<group>"; };
 		EC9CC6B81BF0A57E009B4323 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -100,13 +69,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EC9CC6901BF09DA2009B4323 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC9CC69B1BF09DA2009B4323 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,7 +95,6 @@
 			children = (
 				EC9CC67E1BF09DA2009B4323 /* Students */,
 				EC9CC6961BF09DA2009B4323 /* StudentsTests */,
-				EC9CC6A11BF09DA2009B4323 /* StudentsUITests */,
 				EC9CC67D1BF09DA2009B4323 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,7 +104,6 @@
 			children = (
 				EC9CC67C1BF09DA2009B4323 /* Students.app */,
 				EC9CC6931BF09DA2009B4323 /* StudentsTests.xctest */,
-				EC9CC69E1BF09DA2009B4323 /* StudentsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,15 +135,6 @@
 				EC9CC6991BF09DA2009B4323 /* Info.plist */,
 			);
 			path = StudentsTests;
-			sourceTree = "<group>";
-		};
-		EC9CC6A11BF09DA2009B4323 /* StudentsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EC9CC6A21BF09DA2009B4323 /* StudentsUITests.swift */,
-				EC9CC6A41BF09DA2009B4323 /* Info.plist */,
-			);
-			path = StudentsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,24 +175,6 @@
 			productReference = EC9CC6931BF09DA2009B4323 /* StudentsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EC9CC69D1BF09DA2009B4323 /* StudentsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EC9CC6AD1BF09DA2009B4323 /* Build configuration list for PBXNativeTarget "StudentsUITests" */;
-			buildPhases = (
-				EC9CC69A1BF09DA2009B4323 /* Sources */,
-				EC9CC69B1BF09DA2009B4323 /* Frameworks */,
-				EC9CC69C1BF09DA2009B4323 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EC9CC6A01BF09DA2009B4323 /* PBXTargetDependency */,
-			);
-			name = StudentsUITests;
-			productName = StudentsUITests;
-			productReference = EC9CC69E1BF09DA2009B4323 /* StudentsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -257,10 +190,6 @@
 						LastSwiftMigration = 0800;
 					};
 					EC9CC6921BF09DA2009B4323 = {
-						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0800;
-					};
-					EC9CC69D1BF09DA2009B4323 = {
 						CreatedOnToolsVersion = 7.1;
 						LastSwiftMigration = 0800;
 						TestTargetID = EC9CC67B1BF09DA2009B4323;
@@ -282,7 +211,6 @@
 			targets = (
 				EC9CC67B1BF09DA2009B4323 /* Students */,
 				EC9CC6921BF09DA2009B4323 /* StudentsTests */,
-				EC9CC69D1BF09DA2009B4323 /* StudentsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,15 +232,6 @@
 			files = (
 				EC32F75A1BF12CDA0020D853 /* 1FalseStudent.json in Resources */,
 				EC32F7571BF1292D0020D853 /* 1Student.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC9CC69C1BF09DA2009B4323 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC32F75B1BF12CDA0020D853 /* 1FalseStudent.json in Resources */,
-				EC32F7581BF1292D0020D853 /* 1Student.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,34 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC9CC6C21BF0A613009B4323 /* Fetchable.swift in Sources */,
 				EC32F7531BF121060020D853 /* StudentSummaryViewDataSourceControllerTests.swift in Sources */,
-				EC9CC6C61BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift in Sources */,
 				EC9CC6981BF09DA2009B4323 /* StudentsTests.swift in Sources */,
-				EC32F7451BF0C4CB0020D853 /* AppDelegate.swift in Sources */,
-				EC9CC6B61BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift in Sources */,
-				EC9CC6BB1BF0A57E009B4323 /* Student+CoreDataProperties.swift in Sources */,
-				EC32F7431BF0C18E0020D853 /* TheDataModel.xcdatamodeld in Sources */,
-				EC32F7481BF0C4F00020D853 /* ModelManager.swift in Sources */,
-				EC9CC6BE1BF0A57E009B4323 /* Student.swift in Sources */,
-				EC9CC6B21BF09DCF009B4323 /* StudentSummaryView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC9CC69A1BF09DA2009B4323 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC9CC6C31BF0A613009B4323 /* Fetchable.swift in Sources */,
-				EC9CC6C71BF0A9EA009B4323 /* Fetchable+DefaultImplementation.swift in Sources */,
-				EC9CC6A31BF09DA2009B4323 /* StudentsUITests.swift in Sources */,
-				EC9CC6B71BF0A4D7009B4323 /* StudentSummaryViewDataSourceController.swift in Sources */,
-				EC9CC6BC1BF0A57E009B4323 /* Student+CoreDataProperties.swift in Sources */,
-				EC32F7491BF0C4F00020D853 /* ModelManager.swift in Sources */,
-				EC32F7541BF121060020D853 /* StudentSummaryViewDataSourceControllerTests.swift in Sources */,
-				EC32F7441BF0C18E0020D853 /* TheDataModel.xcdatamodeld in Sources */,
-				EC9CC6BF1BF0A57E009B4323 /* Student.swift in Sources */,
-				EC9CC6B31BF09DCF009B4323 /* StudentSummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,11 +271,6 @@
 			isa = PBXTargetDependency;
 			target = EC9CC67B1BF09DA2009B4323 /* Students */;
 			targetProxy = EC9CC6941BF09DA2009B4323 /* PBXContainerItemProxy */;
-		};
-		EC9CC6A01BF09DA2009B4323 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC9CC67B1BF09DA2009B4323 /* Students */;
-			targetProxy = EC9CC69F1BF09DA2009B4323 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -442,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -480,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -493,6 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Students/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.haaakon.Students;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Students/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.haaakon.Students;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,6 +407,7 @@
 		EC9CC6AB1BF09DA2009B4323 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StudentsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -524,47 +415,21 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Students.app/Students";
 			};
 			name = Debug;
 		};
 		EC9CC6AC1BF09DA2009B4323 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StudentsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.haaakon.StudentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		EC9CC6AE1BF09DA2009B4323 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = StudentsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.haaakon.StudentsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Students;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		EC9CC6AF1BF09DA2009B4323 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = StudentsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.haaakon.StudentsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Students;
-				USES_XCTRUNNER = YES;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Students.app/Students";
 			};
 			name = Release;
 		};
@@ -594,15 +459,6 @@
 			buildConfigurations = (
 				EC9CC6AB1BF09DA2009B4323 /* Debug */,
 				EC9CC6AC1BF09DA2009B4323 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC9CC6AD1BF09DA2009B4323 /* Build configuration list for PBXNativeTarget "StudentsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EC9CC6AE1BF09DA2009B4323 /* Debug */,
-				EC9CC6AF1BF09DA2009B4323 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

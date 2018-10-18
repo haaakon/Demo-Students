@@ -20,7 +20,7 @@ final class Student: NSManagedObject, Fetchable {
         return student
     }
 
-    static func averageGrade(inManagedObjectContext managedObjectContext: NSManagedObjectContext = ModelManager.sharedManager.managedObjectContext) -> Float {
+    static func averageGrade(inManagedObjectContext managedObjectContext: NSManagedObjectContext = ModelManager.sharedManager.persistentContainer.viewContext) -> Float {
         let students = Student.allObjects(inManagedObjectContext: managedObjectContext)
 
         var totalGrade : Float = 0
@@ -31,7 +31,7 @@ final class Student: NSManagedObject, Fetchable {
 
     }
     
-    convenience init?(attributes: [String: AnyObject], inManagedObjectContext managedObjectContext: NSManagedObjectContext = ModelManager.sharedManager.managedObjectContext) {
+    convenience init?(attributes: [String: AnyObject], inManagedObjectContext managedObjectContext: NSManagedObjectContext = ModelManager.sharedManager.persistentContainer.viewContext) {
         
         
         guard let actualName = attributes["name"] as? String else {
