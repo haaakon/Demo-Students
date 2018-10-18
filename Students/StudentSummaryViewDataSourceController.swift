@@ -7,7 +7,6 @@
 //
 
 import UIKit
-@testable import Students
 
 class StudentSummaryViewDataSourceController : StudentSummaryViewDataSource {
     

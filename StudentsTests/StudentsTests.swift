@@ -67,7 +67,7 @@ class StudentsTests: XCTestCase {
     }
 
     func testCreate1Student() {
-        let student = Student.insertStudentWithName("Erik", inManagedObjectContext: managedObjectContext)
+        let _ = Student.insertStudentWithName("Erik", inManagedObjectContext: managedObjectContext)
         ModelManager.sharedManager.saveContext()
         let fetchedStudents = Student.allObjects(inManagedObjectContext: managedObjectContext)
         XCTAssertEqual(fetchedStudents.count, 1)

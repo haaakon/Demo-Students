@@ -55,11 +55,8 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-fZ-l6O">
-                                <rect key="frame" x="103.5" y="253" width="168" height="30"/>
+                                <rect key="frame" x="100" y="253" width="175" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0069901315789473685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="168" id="cS0-Ze-AI2"/>
-                                </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Legg til"/>
                                 <connections>
@@ -72,9 +69,10 @@
                             <constraint firstItem="O4c-fZ-l6O" firstAttribute="top" secondItem="6rj-Hl-7K2" secondAttribute="bottom" constant="30" id="4ja-fZ-aiU"/>
                             <constraint firstItem="6rj-Hl-7K2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Co8-Z5-Muc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6rj-Hl-7K2" secondAttribute="bottom" constant="444" id="Dax-JD-NDE"/>
+                            <constraint firstAttribute="trailing" secondItem="O4c-fZ-l6O" secondAttribute="trailing" constant="100" id="NBg-Kd-Q9t"/>
                             <constraint firstItem="6rj-Hl-7K2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="PKg-cq-WgJ"/>
+                            <constraint firstItem="O4c-fZ-l6O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="XrE-9y-rjh"/>
                             <constraint firstAttribute="trailing" secondItem="6rj-Hl-7K2" secondAttribute="trailing" constant="20" id="nkd-7r-idC"/>
-                            <constraint firstItem="O4c-fZ-l6O" firstAttribute="centerX" secondItem="6rj-Hl-7K2" secondAttribute="centerX" id="usa-pe-qfs"/>
                         </constraints>
                     </view>
                     <connections>

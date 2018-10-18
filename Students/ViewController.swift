@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     @IBAction func didTapAddStudentButton() {
         
-        Student.insertStudentWithName("John Doe", inManagedObjectContext: ModelManager.sharedManager.persistentContainer.viewContext)
+        _ = Student.insertStudentWithName("John Doe", inManagedObjectContext: ModelManager.sharedManager.persistentContainer.viewContext)
         ModelManager.sharedManager.saveContext()
         studentSummaryView.reloadData()
         
